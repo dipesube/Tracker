@@ -5,6 +5,7 @@ import Chart from './seperate parts/Chart/Chart';
 import Country from './seperate parts/Country/Country';
 import { getData } from './API'; 
 import styles from './App.module.css';
+import CountUp from 'react-countup';
 
 class App extends React.Component{
 
@@ -14,13 +15,14 @@ class App extends React.Component{
 
     async componentDidMount() {
         const data = await getData();
-        console.log(data);
+        this.setState({data})
     }
 
     render() {
-        return (
+        const  { data } = this.state;
+         return (
             <div className= {styles.container}> 
-                <Cards data = {this.state.data}/>
+                <Cards data = {data}/>
                 <Chart />
                 <Country />
             </div>
