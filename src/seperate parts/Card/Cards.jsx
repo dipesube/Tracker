@@ -22,31 +22,45 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                         <CountUp
                             start = {0}
                             end = {confirmed.value}
-                            duration = {2.5}
-                            seperator = ","
+                            duration = {1.5}
+                            separator = ","
                         />
                         </Typography>
                         
-                        <Typography color="textSecondary">REALTIME </Typography>
-                        <Typography variant="body2">Number of active cases</Typography>
+                        <Typography color="textSecondary">Last updated: {new Date(lastUpdate).toDateString()} </Typography>
+                        <Typography variant="body2">Total number of active cases</Typography>
                     </CardContent>
                 </Grid>
 
                 <Grid item component = {Card}> 
                     <CardContent> 
                         <Typography color="textSecondary" gutterBottom>Recovered</Typography>
-                        <Typography variant="h5">REAL DATA</Typography>
-                        <Typography color="textSecondary">REALTIME DATA</Typography>
-                        <Typography variant="body2">Number of recovered cases</Typography>
+                        <Typography variant="h5">
+                        <CountUp
+                            start = {0}
+                            end = {recovered.value}
+                            duration = {1.5}
+                            separator = ","
+                        />
+                        </Typography>
+                        <Typography color="textSecondary">Last time: {new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography variant="body2">Total number of recovered cases</Typography>
                     </CardContent>
                 </Grid>
 
                 <Grid item component = {Card}> 
                     <CardContent> 
                         <Typography color="textSecondary" gutterBottom>Deaths</Typography>
-                        <Typography variant="h5">REAL DATA</Typography>
-                        <Typography color="textSecondary">REALTIME DATA</Typography>
-                        <Typography variant="body2">Number of total deaths</Typography>
+                        <Typography variant="h5">
+                        <CountUp
+                            start = {0}
+                            end = {deaths.value}
+                            duration = {1.5}
+                            separator = ","
+                        />
+                        </Typography>
+                        <Typography color="textSecondary">Last time: {new Date(lastUpdate).toDateString()}</Typography>
+                        <Typography variant="body2">Total number of deaths</Typography>
                     </CardContent>
                 </Grid>
             

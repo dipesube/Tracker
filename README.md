@@ -1,1 +1,1 @@
-# Learning JavaScript via youtube tutorial on creating a tracking application.
+# Learning JavaScript via tutorial on creating a tracking application.
