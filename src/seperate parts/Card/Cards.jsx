@@ -8,6 +8,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     if (!confirmed){
         return 'Loading...';
     }
+    
     return (
         <div className="styles.container">
             <Grid 
@@ -15,7 +16,8 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                 justify='center'    
                 spacing={3}
             >
-                <Grid item component = {Card}> 
+                
+                <Grid item component = {Card}>  
                     <CardContent> 
                         <Typography color="textSecondary" gutterBottom>Infected</Typography>
                         <Typography variant="h5">

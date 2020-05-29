@@ -1,1 +1,1 @@
-# Learning JavaScript via tutorial on creating a tracking application.
+# Tracking app for learning js
