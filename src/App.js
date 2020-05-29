@@ -8,6 +8,10 @@ import styles from './App.module.css';
 
 class App extends React.Component{
 
+    state = {
+        data: {},
+    }
+
     async componentDidMount() {
         const data = await getData();
         console.log(data);
@@ -16,7 +20,7 @@ class App extends React.Component{
     render() {
         return (
             <div className= {styles.container}> 
-                <Cards />
+                <Cards data = {this.state.data}/>
                 <Chart />
                 <Country />
             </div>
